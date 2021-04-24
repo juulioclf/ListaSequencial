@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <new>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -8,12 +9,19 @@ void limparTela(){
     system("CLS");
 }
 
+struct pessoa{
+    string nome;
+    int rg;
+
+};
+
 int main(){
 
     int funcaoUsuario = 0;
 
-    while(funcaoUsuario != 9 && funcaoUsuario > -1){
 
+
+    while(funcaoUsuario != 9 && funcaoUsuario > -1){
 
         cout << "funcao 1: \n";
         cout << "funcao 2: \n";
