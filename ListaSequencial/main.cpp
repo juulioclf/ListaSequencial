@@ -9,16 +9,41 @@ void limparTela(){
     system("CLS");
 }
 
+
 struct pessoa{
     string nome;
     int rg;
 
 };
 
+void imprimeSequencial(pessoa *ponteiro, int tamanho){
+
+    for(int i = 0; i < tamanho; i++){
+        cout << "linha: " << i << " nome: " << ponteiro[i].nome <<" rg: " << ponteiro[i].rg << "\n";
+    }
+}
+
+
 int main(){
 
     int funcaoUsuario = 0;
+    int tamanho;
 
+    pessoa *ponteiroSequencial;
+
+
+    //exemplo:
+
+    pessoa *exemploSequencial = new pessoa[2];
+
+    exemploSequencial[0].nome = "julio";
+    exemploSequencial[0].rg = 123;
+    exemploSequencial[1].nome = "gabe";
+    exemploSequencial[1].rg = 321;
+
+    ponteiroSequencial = exemploSequencial;
+
+    imprimeSequencial(ponteiroSequencial, 2);
 
 
     while(funcaoUsuario != 9 && funcaoUsuario > -1){
