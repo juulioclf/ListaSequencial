@@ -82,7 +82,7 @@ int main(){
 
         switch (funcaoUsuario){
             case 1:
-                cout << "Voce selecionou a funcao 1:  insercao de uma pessoa no inicio da lista\n\n";\
+                cout << "Voce selecionou a funcao 1:  insercao de uma pessoa no inicio da lista\n\n";
                 cout << "Digite um nome: ";
                 cin >> nome;
                 cout << "Digite um RG: ";
@@ -90,24 +90,32 @@ int main(){
 
                 addComecoSequencial(ponteiroSequencial, &tamanho, nome, rg);
 
-                cout << "\nUsuario: " << nome << ",RG: " << rg << " Adicionado ao inicio da lista com sucesso!\n";
+                cout << "\nUsuario: " << nome << ", RG: " << rg << " Adicionado ao inicio da lista com sucesso!\n";
 
                 break;
             case 2:
+                cout << "Voce selecionou a funcao 2:  \n\n";
                 break;
             case 3:
+                cout << "Voce selecionou a funcao 3:  \n\n";
                 break;
             case 4:
+                cout << "Voce selecionou a funcao 4:  \n\n";
                 break;
             case 5:
+                cout << "Voce selecionou a funcao 5:  \n\n";
                 break;
             case 6:
+                cout << "Voce selecionou a funcao 6:  \n\n";
                 break;
             case 7:
+                cout << "Voce selecionou a funcao 7:  \n\n";
                 break;
             case 8:
+                cout << "Voce selecionou a funcao 8:  \n\n";
                 break;
             case 9:
+                cout << "Voce selecionou a funcao 9:  \n\n";
                 break;
         }
 
