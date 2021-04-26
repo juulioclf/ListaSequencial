@@ -145,6 +145,21 @@ void popPosicaoSequencial(pessoa *&ponteiro, int *tamanho, int posicao){
 
 }
 
+string retornaNome(pessoa *ponteiro, int *tamanho, int rg){
+
+    string nome = "Nome nao encontrado";
+
+    for(int i = 0; i < *tamanho; i++){
+        if(ponteiro[i].rg == rg){
+
+            nome = ponteiro[i].nome;
+        }
+
+        }
+    return nome;
+
+}
+
 int main(){
 
     int funcaoUsuario = 0;
@@ -155,16 +170,15 @@ int main(){
 
     while(funcaoUsuario != 9 && funcaoUsuario > -1){
 
-        imprimeSequencial(ponteiroSequencial, tamanho);
         cout << "funcao 1: insercao de uma pessoa no inicio da lista\n";
         cout << "funcao 2: insercao de uma pessoa no final da lista\n";
         cout << "funcao 3: insercao de uma pessoa na posicao N\n";
         cout << "funcao 4: remocao de uma pessoa no inicio da lista\n";
         cout << "funcao 5: remocao de uma pessoa no final da lista\n";
         cout << "funcao 6: remocao de uma pessoa na posicao N\n";
-        cout << "funcao 7: \n";
-        cout << "funcao 8: \n";
-        cout << "funcao 9: \n";
+        cout << "funcao 7: procurar um Nome pelo RG\n";
+        cout << "funcao 8: mostrar a lista\n";
+        cout << "funcao 9: sair do sistema\n";
         cout << "\ndigite a opcao desejada e pressione ENTER: ";
         cin >> funcaoUsuario;
         limparTela();
@@ -267,16 +281,25 @@ int main(){
                 break;
 
             case 7:
-                cout << "Voce selecionou a funcao 7:  \n\n";
+
+                cout << "Voce selecionou a funcao 7: procurar um Nome pelo RG\n\n";
+                cout << "Digite um RG: ";
+                cin >> rg;
+
+                cout << "\nNome do rg " << rg << ": " << retornaNome(ponteiroSequencial, &tamanho, rg) << "\n";
+
+
                 break;
 
             case 8:
-                cout << "Voce selecionou a funcao 8:  \n\n";
+
+                cout << "Voce selecionou a funcao 8: sair do sistema\n\n";
+
+                imprimeSequencial(ponteiroSequencial, tamanho);
+
                 break;
 
-            case 9:
-                cout << "Voce selecionou a funcao 9:  \n\n";
-                break;
+
         }
 
     }
