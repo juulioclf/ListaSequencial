@@ -1,2 +1,2 @@
 # ListaSequencial
-projeto de lista sequencial em C e C++
+projeto de lista sequencial na linguagem C e C++
