@@ -173,8 +173,6 @@ int main(){
         cin >> funcaoUsuario;
         limparTela();
 
-
-
         switch (funcaoUsuario){
             case 1:
 
