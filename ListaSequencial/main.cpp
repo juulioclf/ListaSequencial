@@ -9,7 +9,6 @@ void limparTela(){
     system("CLS");
 }
 
-
 struct pessoa{
     string nome;
     int rg;
@@ -26,14 +25,12 @@ void imprimeSequencial(pessoa *ponteiro, int tamanho){
 void addComecoSequencial(pessoa *&ponteiro, int *tamanho, string nome, int rg){
 
     if(*tamanho == 0){
-
         pessoa *novoSequencial = new pessoa[1];
 
         novoSequencial[0].nome = nome;
         novoSequencial[0].rg = rg;
 
         ponteiro = novoSequencial;
-
     }else{
         pessoa *novoSequencial = new pessoa[*tamanho + 1];
 
@@ -46,7 +43,6 @@ void addComecoSequencial(pessoa *&ponteiro, int *tamanho, string nome, int rg){
         }
 
         ponteiro = novoSequencial;
-
     }
 
     *tamanho = *tamanho + 1;
@@ -85,9 +81,7 @@ void addPosicaoSequencial(pessoa *&ponteiro, int *tamanho, string nome, int rg, 
     for(int i = posicao + 1; i < *tamanho + 1; i++ ){
         novoSequencial[i].nome = ponteiro[i-1].nome;
         novoSequencial[i].rg = ponteiro[i-1].rg;
-
     }
-
     *tamanho = *tamanho + 1;
 
     ponteiro = novoSequencial;
@@ -137,11 +131,9 @@ void popPosicaoSequencial(pessoa *&ponteiro, int *tamanho, int posicao){
             novoSequencial[i].rg = ponteiro[i+1].rg;
         }
     }
-
     *tamanho = *tamanho - 1;
 
     ponteiro = novoSequencial;
-
 
 }
 
@@ -154,19 +146,17 @@ string retornaNome(pessoa *ponteiro, int *tamanho, int rg){
 
             nome = ponteiro[i].nome;
         }
-
-        }
+    }
     return nome;
 
 }
 
 int main(){
 
-    int funcaoUsuario = 0;
-    int tamanho = 0;
+    int funcaoUsuario = 0, tamanho = 0, rg, posicao;
+    string nome;
 
     pessoa *ponteiroSequencial;
-
 
     while(funcaoUsuario != 9 && funcaoUsuario > -1){
 
@@ -183,11 +173,11 @@ int main(){
         cin >> funcaoUsuario;
         limparTela();
 
-        string nome;
-        int rg, posicao;
+
 
         switch (funcaoUsuario){
             case 1:
+
                 cout << "Voce selecionou a funcao 1:  insercao de uma pessoa no inicio da lista\n\n";
                 cout << "Digite um nome: ";
                 cin >> nome;
@@ -238,7 +228,6 @@ int main(){
 
                 cout << "\nUsuario: " << nome << ", RG: " << rg << " Adicionado ao final da lista com sucesso!\n";
 
-
                 break;
 
             case 4:
@@ -254,6 +243,7 @@ int main(){
                 break;
 
             case 5:
+
                 cout << "Voce selecionou a funcao 5: remocao de uma pessoa no final da lista\n\n";
 
                  if(tamanho == 0){
@@ -288,7 +278,6 @@ int main(){
 
                 cout << "\nNome do rg " << rg << ": " << retornaNome(ponteiroSequencial, &tamanho, rg) << "\n";
 
-
                 break;
 
             case 8:
@@ -298,7 +287,6 @@ int main(){
                 imprimeSequencial(ponteiroSequencial, tamanho);
 
                 break;
-
 
         }
 
