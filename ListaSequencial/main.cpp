@@ -296,7 +296,6 @@ int main(){
 
                 cout << "Por favor, digite um codigo valido\n\n";
 
-
         }
 
     }
