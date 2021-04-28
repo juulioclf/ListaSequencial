@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1619630703 source:c:\users\juli0\documents\github\listasequencial\listasequencial\main.cpp
+	<stdlib.h>
+	<new>
+	<iostream>
+	<string>
+

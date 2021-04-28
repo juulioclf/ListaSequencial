@@ -158,7 +158,7 @@ int main(){
 
     pessoa *ponteiroSequencial;
 
-    while(funcaoUsuario != 9 && funcaoUsuario > -1){
+    while(funcaoUsuario != 9){
 
         cout << "funcao 1: insercao de uma pessoa no inicio da lista\n";
         cout << "funcao 2: insercao de uma pessoa no final da lista\n";
@@ -285,6 +285,17 @@ int main(){
                 imprimeSequencial(ponteiroSequencial, tamanho);
 
                 break;
+
+            case 9:
+
+                cout << "saindo do sistema...\n\n";
+
+                break;
+
+            default:
+
+                cout << "Por favor, digite um codigo valido\n\n";
+
 
         }
 
